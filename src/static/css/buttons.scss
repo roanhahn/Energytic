@@ -1,0 +1,76 @@
+.button{
+	padding: 25px 40px;
+	margin: 5px;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+	white-space: nowrap;
+	text-shadow: none;
+	display: inline-block;
+	letter-spacing: 1px;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	-moz-transition: all 0.2s ease-in-out 0s;
+	-o-transition: all 0.2s ease-in-out 0s;
+	transition: all 0.2s ease-in-out 0s;
+	font-family: $font-1;
+	border-width: 2px;
+	border-color: $color-1;
+	border-style: solid;
+	background: $color-1;
+	color: #fff;
+
+	&:active, &:focus{
+		color: #fff;
+	}
+
+	&:hover{
+		background: #fff;
+		color: $color-1;
+	}
+
+	&-rounded{
+		-webkit-border-radius: 35px;
+		-moz-border-radius: 35px;
+		border-radius: 35px;
+	}
+
+	&-outline{
+		background: transparent;
+		color: $color-1;
+	}
+
+	&-margin-left{
+		margin-left: 10px;
+	}
+
+	& i{
+		font-weight: normal;
+		margin-right: 5px;
+		line-height: 0;
+	}
+
+	&-2{
+		background: $color-3;
+		color: #fff;
+		border-width: 2px;
+		border-color: $color-3;
+		border-style: solid;
+
+		&:hover{
+			color: $color-3;
+		}
+	}
+
+	&-3{
+		background: $text-color-1;
+		color: #fff;
+		border-width: 2px;
+		border-color: $text-color-1;
+		border-style: solid;
+
+		&:hover{
+			color: $text-color-1
+		}
+	}
+}

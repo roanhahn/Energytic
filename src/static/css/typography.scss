@@ -1,0 +1,152 @@
+body, html{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	cursor: default;
+	background: #fff;
+	font-weight: 400;
+	font-size: 16px;
+	font-family: $font-1;
+	color: $text-color-1;
+	height: 100%;
+	background: $section-color;
+	-webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+	position: relative;
+
+	// background: #f7f7f7 url(../img/bg.jpg) no-repeat center center fixed;
+	// background-size: cover;
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+	background-color: $toColor; /* Fallback Color */
+	background-image: -webkit-linear-gradient(left top, $fromColor, $toColor); 
+	background-image:    -moz-linear-gradient(left top, $fromColor, $toColor);
+	background-image:     -ms-linear-gradient(left top, $fromColor, $toColor); 
+	background-image:      -o-linear-gradient(left top, $fromColor, $toColor);
+	background-image:         linear-gradient(to left top, $toColor, $fromColor);
+}
+
+a, a:active, a:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+a{
+	-webkit-transition: all .2s ease-in-out 0s;
+	-moz-transition: all .2s ease-in-out 0s;
+	-o-transition: all .2s ease-in-out 0s;
+	transition: all .2s ease-in-out 0s;
+
+	&:hover{
+		text-decoration: none;
+		color: $color-1;
+	}
+
+	color: $color-1;
+}
+
+.h1, .h2, .h3{
+	margin-top: 0;
+}
+
+.h1{
+	color: $heading-color;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.h2{
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+.h3{
+	color: $heading-color;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 19px;
+	margin-bottom: 20px;
+	letter-spacing: .2px;
+}
+
+.paragraph{
+	line-height: 2;
+	padding: 0;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.tooltip-icon{
+	color: $heading-color;
+	font-size: 20px;
+	display: inline-block;
+	cursor: help;
+	line-height: 1;
+}
+
+.hr{
+	height: 1px;
+	@include linear-gradient($color-1, $color-3);
+	border: none;
+}
+
+.accordion{
+	margin: 0;
+	padding: 0;
+
+	&-item{
+		list-style-type: none;
+		border-bottom: 1px solid #fff;
+		&--active{
+			& .accordion-header{
+				@include linear-gradient($color-3, $color-4);
+			}
+
+			& .accordion-content{
+				display: block;
+			}
+		}
+
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+
+	&-header{
+		@include linear-gradient($color-1, $color-2);
+		color: #fff;
+		padding: 15px;
+		font-size: 19px;
+		line-height: 1;
+		font-weight: 400;
+		text-transform: uppercase;
+		cursor: pointer;
+		
+
+
+	}
+
+	&-content{
+		background: #fff;
+		display: none;
+	}
+
+	&-article{
+		padding: 50px 30px;
+	}
+}
+
+.message{
+	color: $color-3;
+
+	& i{
+		font-size: 100px;
+		margin-bottom: 20px;
+	}
+
+	&-error{
+		color: $text-color-1;
+	}
+}
